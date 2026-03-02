@@ -14,10 +14,10 @@ import { TransactionService } from '../../core/services/transaction.service';
 import { AuthService } from '../../core/services/auth.service';
 
 @Component({
-    selector: 'app-transactions',
-    standalone: true,
-    imports: [CommonModule, ReactiveFormsModule, MatCardModule, MatInputModule, MatButtonModule, MatSnackBarModule, MatTableModule, MatPaginatorModule, MatIconModule, MatTabsModule, RouterModule],
-    template: `
+  selector: 'app-transactions',
+  standalone: true,
+  imports: [CommonModule, ReactiveFormsModule, MatCardModule, MatInputModule, MatButtonModule, MatSnackBarModule, MatTableModule, MatPaginatorModule, MatIconModule, MatTabsModule, RouterModule],
+  template: `
   <div class="page-container">
     <div class="header">
       <button mat-icon-button routerLink="/dashboard"><mat-icon>arrow_back</mat-icon></button>
@@ -118,7 +118,7 @@ import { AuthService } from '../../core/services/auth.service';
     </mat-tab-group>
   </div>
   `,
-    styles: [`
+  styles: [`
   .page-container { padding: 32px; max-width: 900px; margin: 0 auto; }
   .header { display: flex; align-items: center; margin-bottom: 24px; gap: 16px; }
   .header h2 { margin: 0; font-weight: 600; font-size: 24px; color: #333; }
@@ -147,47 +147,47 @@ import { AuthService } from '../../core/services/auth.service';
   `]
 })
 export class TransactionsComponent implements OnInit {
-    private fb = inject(FormBuilder);
-    private txService = inject(TransactionService);
-    private authService = inject(AuthService);
-    private snackBar = inject(MatSnackBar);
+  private fb = inject(FormBuilder);
+  private txService = inject(TransactionService);
+  private authService = inject(AuthService);
+  private snackBar = inject(MatSnackBar);
 
-    userId = '';
+  userId = '';
 
-    transferForm: FormGroup = this.fb.group({
-        receiverId: ['', Validators.required],
-        amount: ['', [Validators.required, Validators.min(1)]]
-    });
+  transferForm: FormGroup = this.fb.group({
+    receiverId: ['', Validators.required],
+    amount: ['', [Validators.required, Validators.min(1)]]
+  });
 
-    loading = false;
+  loading = false;
 
-    transactions: any[] = [];
-    displayedColumns = ['date', 'details', 'type', 'amount', 'status'];
-    totalItems = 0;
-    pageSize = 10;
-    currentPage = 1;
+  transactions: any[] = [];
+  displayedColumns = ['date', 'details', 'type', 'amount', 'status'];
+  totalItems = 0;
+  pageSize = 10;
+  currentPage = 1;
 
-    ngOnInit() {
-        const user = this.authService.currentUser();
-        if (user) {
-            this.userId = user.id;
-        }
-        this.loadHistory();
+  ngOnInit() {
+    const user = this.authService.currentUser();
+    if (user) {
+      this.userId = user.id;
     }
+    this.loadHistory();
+  }
 
-    onTransfer() {
-        if (this.transferForm.invalid) return;
+  onTransfer() {
+    if (this.transferForm.invalid) return;
 
-        this.loading = true;
-        const { receiverId, amount } = this.transferForm.value;
-        const idempotencyKey = crypto.randomUUID();
+    this.loading = true;
+    const { receiverId, amount } = this.transferForm.value;
+    const idempotencyKey = crypto.randomUUID();
 
-        this.txService.transferMoney(receiverId, amount, idempotencyKey).subscribe({
-            next: () => {
-                this.loading = false;
-                this.snackBar.open(\`Successfully sent $\${amount}!\`, 'Close', { duration: 3000 });
+    this.txService.transferMoney(receiverId, amount, idempotencyKey).subscribe({
+      next: () => {
+        this.loading = false;
+        this.snackBar.open(`Successfully sent $${amount}!`, 'Close', { duration: 3000 });
         this.transferForm.reset();
-        
+
         Object.keys(this.transferForm.controls).forEach(key => {
           this.transferForm.controls[key].setErrors(null);
         });

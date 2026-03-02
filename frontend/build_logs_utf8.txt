@@ -1,0 +1,243 @@
+﻿[33mΓ¥»[39m Building...
+[32mΓ£ö[39m Building...
+Application bundle generation failed. [5.065 seconds]
+
+node.exe : [1m[31m[31mX [
+41;31m[[41;97mERROR[41;31m]
+[0m [1mNo matching export 
+in "node_modules/@angular/cor
+e/fesm2022/core.mjs" for 
+import "DOCUMENT"[0m
+At line:1 char:1
++ & "C:\Program 
+Files\nodejs/node.exe" 
+"C:\Program 
+Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~
+    + CategoryInfo           
+   : NotSpecified: ([1m[3  
+  1m[31mX... "DOCUMENT"[   
+ 0m:String) [], RemoteExc    
+eption
+    + FullyQualifiedErrorId  
+   : NativeCommandError
+ 
+
+    node_modules/@angular/cdk
+/fesm2022/_a11y-module-chunk.
+mjs:2:54:
+[37m      2 Γöé ...e, 
+afterNextRender, NgZone, 
+[32mDOCUMENT[37m, 
+Injector, ElementRef, bool...
+        Γò╡                  
+              
+[32m~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR
+[41;31m][0m [1mNo 
+matching export in "node_modu
+les/@angular/core/fesm2022/co
+re.mjs" for import 
+"DOCUMENT"[0m
+
+    node_modules/@angular/cdk
+/fesm2022/_directionality-chu
+nk.mjs:2:33:
+[37m      2 Γöé ...t { 
+InjectionToken, inject, 
+[32mDOCUMENT[37m, signal, 
+EventEmitter, Inje...
+        Γò╡                  
+              
+[32m~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR
+[41;31m][0m [1mNo 
+matching export in "node_modu
+les/@angular/core/fesm2022/co
+re.mjs" for import 
+"DOCUMENT"[0m
+
+    node_modules/@angular/cdk
+/fesm2022/_focus-monitor-chun
+k.mjs:2:41:
+[37m      2 Γöé 
+...ctionToken, inject, 
+NgZone, [32mDOCUMENT[37m, 
+RendererFactory2, Injectab...
+        Γò╡                  
+              
+[32m~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR
+[41;31m][0m [1mNo 
+matching export in "node_modu
+les/@angular/core/fesm2022/co
+re.mjs" for import 
+"DOCUMENT"[0m
+
+    node_modules/@angular/cdk
+/fesm2022/_overlay-module-chu
+nk.mjs:2:9:
+[37m      2 Γöé import { 
+[32mDOCUMENT[37m, NgZone, 
+inject, Injector, 
+Injectable, RendererFa...
+        Γò╡          
+[32m~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR
+[41;31m][0m [1mNo 
+matching export in "node_modu
+les/@angular/core/fesm2022/co
+re.mjs" for import 
+"DOCUMENT"[0m
+
+    node_modules/@angular/cdk
+/fesm2022/a11y.mjs:6:17:
+[37m      6 Γöé import { 
+inject, [32mDOCUMENT[37m, 
+APP_ID, Injectable, 
+InjectionToken, NgZo...
+        Γò╡                  
+[32m~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR
+[41;31m][0m [1mNo 
+matching export in "node_modu
+les/@angular/core/fesm2022/co
+re.mjs" for import 
+"DOCUMENT"[0m
+
+    node_modules/@angular/cdk
+/fesm2022/portal.mjs:2:132:
+[37m      2 Γöé 
+...iewContainerRef, 
+Directive, 
+[32mDOCUMENT[37m, 
+EventEmitter, Input, Outpu...
+        Γò╡                  
+              
+[32m~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR
+[41;31m][0m [1mNo 
+matching export in "node_modu
+les/@angular/core/fesm2022/co
+re.mjs" for import 
+"DOCUMENT"[0m
+
+    node_modules/@angular/cdk
+/fesm2022/scrolling.mjs:2:124
+:
+[37m      2 Γöé ...ble, 
+ElementRef, Renderer2, 
+[32mDOCUMENT[37m, 
+ChangeDetectorRef, signal,...
+        Γò╡                  
+              
+[32m~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR
+[41;31m][0m [1mNo 
+matching export in "node_modu
+les/@angular/core/fesm2022/co
+re.mjs" for import 
+"DOCUMENT"[0m
+
+    node_modules/@angular/cdk
+/fesm2022/table.mjs:56:244:
+[37m      56 Γöé 
+...hangeDetectorRef, 
+Injector, 
+[32mDOCUMENT[37m, 
+EventEmitter, HostAttribu...
+         Γò╡                 
+               
+[32m~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR
+[41;31m][0m [1mNo 
+matching export in "node_modu
+les/@angular/core/fesm2022/co
+re.mjs" for import 
+"DOCUMENT"[0m
+
+    node_modules/@angular/cdk
+/fesm2022/text-field.mjs:2:16
+6:
+[37m      2 Γöé ...rective, 
+Output, Renderer2, 
+[32mDOCUMENT[37m, 
+booleanAttribute, Input, N...
+        Γò╡                  
+              
+[32m~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR
+[41;31m][0m [1mNo 
+matching export in "node_modu
+les/@angular/cdk/fesm2022/tab
+le.mjs" for import "_COALESCE
+D_STYLE_SCHEDULER"[0m
+
+    node_modules/@angular/mat
+erial/fesm2022/table.mjs:3:30
+:
+[37m      3 Γöé ...kTable, 
+CDK_TABLE, [32m_COALESCED_ST
+YLE_SCHEDULER[37m, 
+_CoalescedStyleSc...
+        Γò╡                  
+     [32m~~~~~~~~~~~~~~~~~~~
+~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR
+[41;31m][0m [1mNo 
+matching export in "node_modu
+les/@angular/cdk/fesm2022/tab
+le.mjs" for import "_Coalesce
+dStyleScheduler"[0m
+
+    node_modules/@angular/mat
+erial/fesm2022/table.mjs:3:58
+:
+[37m      3 Γöé 
+...ED_STYLE_SCHEDULER, [32m_
+CoalescedStyleScheduler[37m,
+ STICKY_POSITIONING...
+        Γò╡                  
+      [32m~~~~~~~~~~~~~~~~~~
+~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERROR
+[41;31m][0m [1mNo 
+matching export in "node_modu
+les/@angular/cdk/fesm2022/col
+lections.mjs" for import 
+"_VIEW_REPEATER_STRATEGY"[0m
+
+    node_modules/@angular/mat
+erial/fesm2022/table.mjs:4:9:
+[37m      4 Γöé import { [3
+2m_VIEW_REPEATER_STRATEGY[37
+m, _RecycleViewRepeaterStrate
+gy, _Di...
+        Γò╡          [32m~~~
+~~~~~~~~~~~~~~~~~~~~[0m
+
+[39m[22m

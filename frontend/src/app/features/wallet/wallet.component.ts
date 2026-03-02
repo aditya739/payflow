@@ -10,10 +10,10 @@ import { WalletService } from '../../core/services/wallet.service';
 import { MatIconModule } from '@angular/material/icon';
 
 @Component({
-    selector: 'app-wallet',
-    standalone: true,
-    imports: [CommonModule, ReactiveFormsModule, MatCardModule, MatInputModule, MatButtonModule, MatSnackBarModule, MatIconModule, RouterModule],
-    template: `
+  selector: 'app-wallet',
+  standalone: true,
+  imports: [CommonModule, ReactiveFormsModule, MatCardModule, MatInputModule, MatButtonModule, MatSnackBarModule, MatIconModule, RouterModule],
+  template: `
   <div class="page-container">
     <div class="header">
       <button mat-icon-button routerLink="/dashboard"><mat-icon>arrow_back</mat-icon></button>
@@ -51,7 +51,7 @@ import { MatIconModule } from '@angular/material/icon';
     </mat-card>
   </div>
   `,
-    styles: [`
+  styles: [`
   .page-container { padding: 32px; max-width: 600px; margin: 0 auto; }
   .header { display: flex; align-items: center; margin-bottom: 24px; gap: 16px; }
   .header h2 { margin: 0; font-weight: 600; font-size: 24px; color: #333; }
@@ -63,31 +63,31 @@ import { MatIconModule } from '@angular/material/icon';
   `]
 })
 export class WalletComponent {
-    private fb = inject(FormBuilder);
-    private walletService = inject(WalletService);
-    private snackBar = inject(MatSnackBar);
-    private router = inject(Router);
+  private fb = inject(FormBuilder);
+  private walletService = inject(WalletService);
+  private snackBar = inject(MatSnackBar);
+  private router = inject(Router);
 
-    depositForm: FormGroup = this.fb.group({
-        amount: ['', [Validators.required, Validators.min(1)]]
-    });
+  depositForm: FormGroup = this.fb.group({
+    amount: ['', [Validators.required, Validators.min(1)]]
+  });
 
-    loading = false;
+  loading = false;
 
-    setAmount(amt: number) {
-        this.depositForm.patchValue({ amount: amt });
-    }
+  setAmount(amt: number) {
+    this.depositForm.patchValue({ amount: amt });
+  }
 
-    onSubmit() {
-        if (this.depositForm.invalid) return;
+  onSubmit() {
+    if (this.depositForm.invalid) return;
 
-        this.loading = true;
-        const amount = this.depositForm.value.amount;
+    this.loading = true;
+    const amount = this.depositForm.value.amount;
 
-        this.walletService.addMoney(amount).subscribe({
-            next: (res) => {
-                this.loading = false;
-                this.snackBar.open(\`Successfully added $\${amount} to your wallet!\`, 'Close', { duration: 3000 });
+    this.walletService.addMoney(amount).subscribe({
+      next: (res) => {
+        this.loading = false;
+        this.snackBar.open(`Successfully added $${amount} to your wallet!`, 'Close', { duration: 3000 });
         this.router.navigate(['/dashboard']);
       },
       error: (err) => {
